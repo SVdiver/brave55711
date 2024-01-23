@@ -135,3 +135,22 @@
 //  {
 //     Console.WriteLine("4 четверть");
 //  }
+
+// Задача 3
+
+// Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine()); 
+// int firstDigit = number / 10; 
+// int secondDigit = number % 10;
+
+// if (firstDigit > secondDigit) 
+// {
+// Console.WriteLine ($"{firstDigit}");    
+// }
+// else
+// {
+// Console.WriteLine ($"{secondDigit}");    
+// } 
+
+
+
