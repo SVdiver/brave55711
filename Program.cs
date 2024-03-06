@@ -436,3 +436,168 @@
 // // кажддый элемент - число: [0,100]
 // Console.WriteLine($"Массив: [ {string.Join(";", array)} ]");
 // Console.WriteLine($"Total: {GetCount(array)}");
+
+// Лекция 4 - 2мерные массивы
+// Задача 1
+// создать двумерный массив с размерами 3 х 5,
+// состоящий из целых чисел. Вывести его элементы на экран.
+
+// int[,] CreateMatrix (int rowcount, int columsCount);
+// {
+//      int[,] matrix = new int [rowCount, columsCount];
+
+//      Random rnd = new Random();
+//      for (int i = 0; i < matrix.GetLength(0); i++)
+//      {
+//          for (int j = 0; j < matrix.GetLength(1); j++)
+//          {
+//           matrix[i, j] = rnd.Next(1, 11);
+//          } 
+//      }
+//      return matrix; 
+// }  
+
+// void ShowMatrix(int[,] matrix)
+// {
+//      for (int i = 0; i < matrix.GetLength(0); i++)    
+//      {
+//           for (int j = 0; j < matrix.GetLength(1); j++)
+//           {
+//               Console.Write($" {matrix[i, j]} ");
+//           }
+//           Console.WriteLine();
+//      } 
+// }
+// int [,] CreateMatrix(int rowCount, int columsCount)
+// {
+
+//     int[,] matrix =  [rowCount, columsCount];
+
+//     Random rnd = new Random();
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//           matrix[i, j] = rnd.Next(1, 11);
+//         }   
+//     }
+//     return matrix;
+// }
+
+// void ShowMatrix(int[,] matrix)
+// {
+//   for (int i = 0; i < matrix.GetLength(0); i++)
+//   {
+//       for (int j = 0; j < matrix.GetLength(1); j++)
+
+//      {          
+//           Console.Write($" {matrix[i, j]} ");
+//      }
+//      Console.WriteLine();   
+//   }
+// }
+// int[,] matrix = CreateMatrix(4, 5);
+// ShowMatrix(matrix);
+
+//lesson 4 task 2
+
+// int[,] CreateMatrix(int rowcount, int columsCount);
+// {
+//      int[,] matrix = new int[rowCount, columsCount];
+
+//      Random rnd = new Random();
+//      for (int i = 0; i < matrix.GetLength(0); i++)
+//      {
+//           for (int j = 0; j < matrix.GetLength(1); j++)
+//           {
+//                matrix[i, j] = rnd.Next(1, 1000);
+//           }
+//      }
+//      return matrix;
+// }
+
+// void ShowMatrix(int[,] matrix)
+// {
+//      for (int i = 0; i < matrix.GetLength(0); i++)    
+//      {
+//           for (int j = 0; j < matrix.GetLength(1); j++)
+//           {
+//               Console.Write($" {matrix[i, j]} ");
+//           }
+//           Console.WriteLine();
+//      } 
+// }
+
+// int[,] matrix = CreateMatrix(3, 4);
+// ShowMatrix(matrix);
+// foreach (int e in matrix)
+// {
+//      if (IsInteresting(e) == true)
+//      {
+//           Console.WriteLine(e);
+//      }
+// }
+// bool IsInteresting(int value)
+// {
+//      int sumOfDigits = GetSumOfDigits(value);
+//      if (sumOfDigits % 2 == 0)
+//      {
+//           return true;
+//      }  
+//           return false;
+// }
+
+// int GetSumOfDigits (int value)
+// {
+//      int sum = 0; 
+//      while(value > 0)
+//      {
+//           sum = sum + value % 10;
+//           value = value % 10;
+//      }
+//      return sum; 
+// }
+
+// Lesson4 task3
+// Считать с консоли строку, состоящую из цифр 
+// латинских букв.
+// Сформировать новую строку, состоящую из букв
+// исходной строки
+
+// string GetLettrsFromString(string s)
+// {
+//      string letters = "";
+//      foreach(char e in s) 
+//      {
+//           if( char.IsAsciiLetter(e) == true)
+//           {
+//            letters = letters + e;
+//           }             
+//      }
+//      return letters;
+// }
+// string str = Console.ReadLine();
+// string result = GetLettrsFromString(str);
+// Console.WriteLine(str);
+
+// Leasson4 Task4
+// Сообщить о наличии отрицательных элементов 
+// в строках 2 мерного массива
+
+// int[,] table = { {1, 1, 1},
+//                  {2, -2, 2},             
+//                  {3, 3, -3} };
+// for (int i = 0; i < table.GetLength(0); i++)
+// {
+//      for (int j = 0; j < table.GetLength(1); j++)
+//      {
+//           if (table[i,j] < 0)
+//           {
+//               Console.WriteLine($" There are negative elements in line{i}");
+//               break;
+//           }
+//      }                  
+// }
+
+// Seminar4 
+// Task1
