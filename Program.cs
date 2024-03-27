@@ -599,5 +599,148 @@
 //      }                  
 // }
 
-// Seminar4 
-// Task1
+// Seminar5 Task1
+//Задайте двумерный массив. Найдите элементы, у которых оба
+//индекса чётные, и замените эти элементы на их квадраты.
+
+// int[,] CreateMatrix (int rows, int cols)
+// {
+//      int[,] matrix = new int[rows, cols]; // Матрица размером rows стр и calls столбцов
+//      Random rnd = new Random();
+//      for (int i =0; i < rows; i++)
+//      // matrix.GetLength(0) = rows, цикл по строкам 
+//      {
+//          // j, m, k
+//          for (int j = 0; j < cols; j++) // matrix.GetLength(1) = rows, цикл проходит по столбцам
+//          {
+//            matrix[i, j] = rnd.Next(11); // [0; 10], 11 не входит в диапазон
+//          }
+//      }
+//      return matrix;
+// } 
+
+// void PrintMatrix (int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++) // цикл по строчкам    
+//      {                  
+//          for (int j = 0; j < matr.GetLength(1); j++) // цикл по столбцам
+//          {  
+//          Console.Write($"{matr[i,j]}\t"); // \t = 4 пробела между элементами 
+//          }
+//          System.Console.WriteLine();
+//      } 
+// }
+
+// void SquareElements(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++) // цикл по строчкам    
+//      {                  
+//          for (int j = 0; j < matr.GetLength(1); j++) // цикл по столбцам
+//          {  
+//              if (i % 2 == 0 && j % 2 == 0)  
+//              {
+//                matr[i,j] *= matr[i,j];  // matr[i,j] = matr[i.j] * matr[i,j];
+//              }
+//          }
+//      } 
+// }
+
+// Вызов функции
+// Console.Write("Введите кол-во строк: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите кол-во столбцов: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+
+// int[,] res = CreateMatrix(rows, columns);
+// PrintMatrix(res); // Матрица ДО
+// Console.WriteLine("Результат: ");
+// // SquareElements(res); // Возведение в квадрат эл.
+// PrintMatrix(res); // Матрица ПОСЛЕ
+// Console.WriteLine($"Total: {GetMainDiagonalSum(res)}");
+
+// // Задача2 Семинар5
+// // Задайте двумерный массив. Найдите сумму элементов,
+// // находящихся на главной диагонали (с индексами (0,0); (1;1) итд
+
+// int GetMainDiagonalSum(int[,] matr)
+// {
+//      int sum = 0;
+//          for (int i = 0; i < matr.GetLength(0); i++) // цикл по строчкам    
+//      {                  
+//          for (int j = 0; j < matr.GetLength(1); j++) // цикл по столбцам
+//          {  
+//              if (i == j) // Номер стр = номер стлбц  
+//              {
+//                sum += matr[i, j]; // sum = sum + matr[i, j];
+//              }   
+//          }
+//      } 
+//      return sum;
+// }
+
+// Task3 Seminar5
+// Задайте двумерный массив из целых чисел. Сформируйте новый
+// одномерный массив, состоящий из средних арифметических
+// значений по строкам двумерного массива. 
+
+// double [] GetArrayWithMeans(int[,] matr)
+// {
+//      double[] means = new double[matr.GetLength(0)];
+//      for (int i = 0; i < matr.GetLength(0); i++) // цикл по строчкам    
+//      {                  
+//          double currentSum = 0;
+//          for (int j = 0; j < matr.GetLength(1); j++) // цикл по столбцам
+//          {  
+//              currentSum += matr[i,j]; 
+//          }
+//          means[i] = Math.Round(currentSum / matr.GetLength(1), 2);
+//      }
+//      return means;
+// } 
+// Console.Write("Введите кол-во строк: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите кол-во столбцов: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+
+// int[,] res = CreateMatrix(rows, columns);
+// PrintMatrix(res); // Матрица ДО
+// Console.WriteLine("Результат: ");
+// SquareElements(res); // Возведение в квадрат эл.
+// PrintMatrix(res); // Матрица после
+//Console.WriteLine($"Total: {GetMainDiagonalSum(res)}");
+// Console.WriteLine($"Result: [ {string.Join("; ", GetArrayWithMeans(res))} ]");
+
+// Лекция5 Рекурсия
+
+// void OpenMatryoshka(int size)
+// {
+//     Console.WriteLine($"Opening matryoshka of size {size}...");
+//     // Базовый случай: самая маленькая матрешка
+//     if ( size ==1)
+//     {
+//         Console.WriteLine("Reached the smallest matryoshka!");
+//         return;
+//     }
+//     OpenMatryoshka(size - 1);
+// }
+
+// OpenMatryoshka(5);
+
+//Task1 Lesson5
+
+// int Fact(int n)
+// {
+//     if (n == 1 || n == 0)
+//     {
+//         Console.WriteLine($"Stop requrson:n={n}");
+//         return 1;
+//     }
+//     Console.WriteLine(n);
+//     return n * Fact(n - 1);
+// }
+
+// Console.Write(Fact(5));
+
+//F11 шаг с заходом
+//F10 шаг с обходом
+//F5 продолжить (до следующей точки)
